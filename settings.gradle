@@ -1,0 +1,4 @@
+rootProject.name = 'stripe'
+
+include 'core'
+include 'stripe-ui'

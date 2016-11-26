@@ -1,0 +1,30 @@
+apply plugin: 'spring-boot'
+apply plugin: 'com.github.ben-manes.versions'
+
+jar {
+    baseName = 'stripe-ui'
+    version = '0.1.0'
+}
+
+bootRun {
+    addResources = true
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+')
+    }
+}
+
+bootRepackage {
+    executable = true
+    excludeDevtools = true
+}
+
+ext['thymeleaf.version'] = '3.0.2.RELEASE'
+ext['thymeleaf-layout-dialect.version'] = '2.1.1'
+
+dependencies {
+    compile project(":core")
+
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-mobile:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
+}
