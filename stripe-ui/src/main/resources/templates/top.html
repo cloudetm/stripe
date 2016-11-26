@@ -5,15 +5,16 @@
   <title>Title</title>
 </head>
 <body>
+<h1>100円振り込めるサイト</h1>
 <form th:action="@{'/payment/register/'}" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_Sf1FESD0OVtHZfZmJpz55BGP"
-    data-amount="999"
+    data-amount="100"
     data-name="Demo Site"
     data-description="Widget"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="jp"
+    data-locale="ja"
     data-currency="jpy">
   </script>
 </form>
