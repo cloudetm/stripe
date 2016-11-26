@@ -44,6 +44,8 @@ subprojects {
 		compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1")
 		compile("org.mybatis:mybatis-typehandlers-jsr310:1.0.1")
 
+		compile "com.stripe:stripe-java:3.3.0"
+
 		testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 	}
 }

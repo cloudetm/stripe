@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
 <body>
-hello
+<form th:action="@{'/payment/register/'}" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_Sf1FESD0OVtHZfZmJpz55BGP"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="jp"
+    data-currency="jpy">
+  </script>
+</form>
 </body>
 </html>
